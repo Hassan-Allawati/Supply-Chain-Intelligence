@@ -1,0 +1,38 @@
+WITH Supplier_Map AS (
+  SELECT DISTINCT Supplier,
+  CASE 
+    WHEN Supplier = 'Gamma_Co' THEN 'Russian Federation'
+    WHEN Supplier = 'Alpha_Inc' THEN 'Singapore'
+    WHEN Supplier = 'Delta_Logistics' THEN 'Australia'
+    WHEN Supplier = 'Beta_Supplies' THEN 'Germany'
+    WHEN Supplier = 'Epsilon_Group' THEN 'United States of America'
+    ELSE 'World'
+  END AS Home_Country 
+  FROM LSCM_ID.procurement_data 
+),
+Supplier_Value AS (
+  SELECT 
+    Supplier, 
+    ROUND(SUM(Quantity * Negotiated_Price), 2) AS Value_At_Risk  
+  FROM LSCM_ID.procurement_data
+  WHERE Order_Status NOT IN ('Delivered', 'Cancelled')
+  GROUP BY Supplier 
+),
+Port_Performance AS (
+  SELECT 
+    Economy_Label,
+    Median_time_in_port_days_Value
+  FROM LSCM_ID.maritime_data
+  WHERE CommercialMarket_Label = "Container ships" 
+    AND Period = "2023-S2" 
+)
+
+SELECT 
+  m.Supplier, 
+  m.Home_Country,
+  v.Value_At_Risk,
+  p.Median_time_in_port_days_Value AS Port_Wait_Time
+FROM Supplier_Map AS m
+JOIN Supplier_Value AS v USING(Supplier)
+JOIN Port_Performance AS p ON m.Home_Country = p.Economy_Label
+ORDER BY Value_At_Risk DESC;
