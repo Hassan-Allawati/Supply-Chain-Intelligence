@@ -1,0 +1,10 @@
+SELECT 
+  Supplier AS Supplier_Name, 
+  COUNT(Order_Status) AS Processing,
+  ROUND(SUM(Quantity * Negotiated_Price), 2) AS Processing_Shipments_Value  
+
+FROM LSCM_ID.procurement_data
+WHERE Order_Status NOT IN ('Delivered', 'Cancelled')
+GROUP BY Supplier
+ORDER BY Processing_Shipments_Value DESC  
+LIMIT 10;
