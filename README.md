@@ -26,8 +26,8 @@ The following table summarizes the high-risk suppliers identified by joining int
 
 To ensure transparency and reproducibility, the repository is organized as follows:
 
-* **[ Datasets](https://www.google.com/search?q=./Datasets):** Contains raw CSV files for Procurement KPIs and Maritime Port Performance.
-* **[ SQL Queries](https://www.google.com/search?q=./SQL_Queries):** Contains structured logic used in Google BigQuery to clean and join the datasets.
+* **[ Datasets][(https://www.google.com/search?q=./Datasets](https://github.com/LSCM-Student/Maritime-Port-Performance-Project-/tree/main/Datasets)):** Contains raw CSV files for Procurement KPIs and Maritime Port Performance.
+* **[ SQL Queries][(https://www.google.com/search?q=./](https://github.com/LSCM-Student/Maritime-Port-Performance-Project-/tree/main/SQL_Queries):** Contains structured logic used in Google BigQuery to clean and join the datasets.
 
 ---
 
