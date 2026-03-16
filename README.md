@@ -22,12 +22,13 @@ The following table summarizes the high-risk suppliers identified by joining int
 
 ---
 
-##  Project Structure
+📂 Project Structure
 
-To ensure transparency and reproducibility, the repository is organized as follows:
+To ensure transparency, the repository is organized into specific "warehouses" for data and logic:
 
-* **[ Datasets][(https://www.google.com/search?q=./Datasets](https://github.com/LSCM-Student/Maritime-Port-Performance-Project-/tree/main/Datasets)):** Contains raw CSV files for Procurement KPIs and Maritime Port Performance.
-* **[ SQL Queries][(https://www.google.com/search?q=./](https://github.com/LSCM-Student/Maritime-Port-Performance-Project-/tree/main/SQL_Queries):** Contains structured logic used in Google BigQuery to clean and join the datasets.
+    📁 Datasets(https://github.com/Hassan-Allawati/Supply-Chain-Intelligence/tree/main/Dataset): View the raw CSV files for Procurement KPIs and Maritime Port Performance.
+
+    📁 SQL Queries(https://github.com/Hassan-Allawati/Supply-Chain-Intelligence/tree/main/SQL_Quries): View the structured logic used in Google BigQuery to clean and join the datasets.
 
 ---
 
