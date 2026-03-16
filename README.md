@@ -1,6 +1,6 @@
-🚢 Maritime-Procurement Risk Audit
+Maritime-Procurement Risk Audit
 Sohar Port Strategic Data Analysis
-📝 Executive Summary
+Executive Summary
 
 As a Chief Commercial Officer (CCO), I conducted a multi-objective audit to bridge the gap between internal procurement performance and external global maritime benchmarks. By joining internal shipment data with UNCTAD maritime efficiency metrics, I identified $1.8M in high-risk capital tied to suppliers operating in congested port regions.
 The Results (Evidence)
@@ -31,7 +31,8 @@ Analyzing external "bottlenecks" using the Maritime Port Performance Dataset.
 Objective 4: The Strategic "Logic Bridge"
 
 Since the datasets did not share a common ID, I built a Common Table Expression (CTE) to map suppliers to their home regions.
-🚀 Business Recommendation
+
+Business Recommendation
 
     Mitigation: Immediate review of Gamma_Co's contract due to the combination of high financial exposure and high regional port congestion.
 
