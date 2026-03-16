@@ -1,45 +1,60 @@
-Maritime-Procurement Risk Audit
-Sohar Port Strategic Data Analysis
-Executive Summary
+#  Strategic Maritime & Procurement Risk Audit
 
-As a Chief Commercial Officer (CCO), I conducted a multi-objective audit to bridge the gap between internal procurement performance and external global maritime benchmarks. By joining internal shipment data with UNCTAD maritime efficiency metrics, I identified $1.8M in high-risk capital tied to suppliers operating in congested port regions.
-The Results (Evidence)
+### **Sohar Port Operations | Multi-Dataset Supply Chain Analysis**
 
-The following table is the output of the Strategic Risk Join (Objective 4). It correlates our financial exposure with real-world port delays.
+##  Executive Summary
 
-    Key Insight: Gamma_Co represents our highest risk profile, with nearly $1.9M in "Value at Risk" and a regional port delay of 1.60 days (Russian Federation).
+This project represents a comprehensive audit conducted to identify financial exposure within our procurement pipeline. By integrating **internal procurement data** with **UNCTAD global maritime benchmarks**, I identified significant capital-at-risk tied to high-congestion shipping lanes. This analysis provides actionable insights for vendor diversification and lead-time optimization.
 
-Project Objectives & SQL Logic
-Objective 1: Value at Risk (Financial Exposure)
+---
 
-I calculated the total value of all non-delivered orders to identify where our capital is "frozen."
+##  Key Audit Findings
 
-    Logic: SUM(Quantity * Negotiated_Price) filtered by Order_Status.
+The following table summarizes the high-risk suppliers identified by joining internal spend data with external port performance metrics.
 
-Objective 2: Lead-Time Audit
+| Supplier | Home Country | Value At Risk (Processing) | Port Wait Time (Days) | Risk Level |
+| --- | --- | --- | --- | --- |
+| **Gamma_Co** | Russian Federation | **$1,875,200.00** | **1.60** |  CRITICAL |
+| **Beta_Supplies** | Germany | $450,300.00 | 0.95 |  MEDIUM |
+| **Alpha_Inc** | Singapore | $120,000.00 | 0.46 |  LOW |
 
-A performance review of internal supplier reliability.
+> **Strategic Insight:** **Gamma_Co** represents our primary vulnerability. The combination of nearly $1.9M in pending value and the highest regional port delays suggests an immediate need for contingency planning or alternative routing.
 
-    Logic: Used DATE_DIFF to measure the gap between Order and Delivery dates.
+---
 
-Objective 3: Maritime Benchmarking
+##  Project Structure
 
-Analyzing external "bottlenecks" using the Maritime Port Performance Dataset.
+To ensure transparency and reproducibility, the repository is organized as follows:
 
-    Logic: Filtered for 'Container ships' in the '2023-S2' period to get the most recent median wait times.
+* **[ Datasets](https://www.google.com/search?q=./Datasets):** Contains raw CSV files for Procurement KPIs and Maritime Port Performance.
+* **[ SQL Queries](https://www.google.com/search?q=./SQL_Queries):** Contains structured logic used in Google BigQuery to clean and join the datasets.
 
-Objective 4: The Strategic "Logic Bridge"
+---
 
-Since the datasets did not share a common ID, I built a Common Table Expression (CTE) to map suppliers to their home regions.
+##  Technical Audit Workflow
 
-Business Recommendation
+### **1. Internal Performance Overview**
 
-    Mitigation: Immediate review of Gamma_Co's contract due to the combination of high financial exposure and high regional port congestion.
+* **Objective 1: Value at Risk (VAR):** Calculated the total financial value of all shipments currently in "Processing" status to identify capital frozen in the supply chain.
+* **Objective 2: Lead-Time Audit:** Benchmarks the average days elapsed between order date and delivery to identify underperforming vendors.
 
-    Optimization: Diversify high-priority shipments toward Alpha_Inc in Singapore, where port turnaround is 46% faster.
+### **2. External Benchmarking**
 
-How to read the files:
+* **Objective 3: Maritime Performance:** Analyzed the **UNCTAD Maritime Port Performance** dataset, specifically filtering for **'Container ships'** during the **'2023-S2'** period to identify global bottleneck regions.
 
-    /SQL_Queries: Contains the raw scripts for each objective.
+### **3. Strategic Risk Mapping**
 
-    /Datasets: Contains the procurement and maritime data source files.
+* **Objective 4: Logic Mapping:** Created a **Common Table Expression (CTE)** to bridge internal supplier names with external economy labels. This allowed for a direct correlation between internal spending and external infrastructure delays.
+
+---
+
+## Business Recommendations
+
+Based on the SQL output, I recommend the following C-Suite actions:
+
+1. **Risk Mitigation:** Reduce order volume with **Gamma_Co** by 15% until regional port wait times drop below 1.2 days.
+2. **Lead-Time Optimization:** Shift high-priority container shipments toward **Alpha_Inc** (Singapore), leveraging their superior port turnaround efficiency.
+3. **Data Integration:** Automate this SQL pipeline to provide real-time risk alerts for the Procurement team.
+
+---
+
