@@ -1,0 +1,11 @@
+SELECT  
+  Economy_Label,
+  AVG(Median_time_in_port_days_Value) AS Med_Value   
+
+FROM LSCM_ID.maritime_data
+WHERE CommercialMarket_Label = 'Container ships' 
+  AND Period = '2023-S2'
+  AND Economy_Label != 'World'
+GROUP BY Economy_Label
+ORDER BY Med_Value DESC
+LIMIT 10;
