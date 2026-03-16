@@ -1,38 +1,37 @@
-#  Strategic Maritime & Procurement Risk Audit
+# 🚢 Strategic Maritime & Procurement Risk Audit
 
 ### **Sohar Port Operations | Multi-Dataset Supply Chain Analysis**
 
-##  Executive Summary
+## 📝 Executive Summary
 
-This project represents a comprehensive audit conducted to identify financial exposure within our procurement pipeline. By integrating **internal procurement data** with **UNCTAD global maritime benchmarks**, I identified significant capital-at-risk tied to high-congestion shipping lanes. This analysis provides actionable insights for vendor diversification and lead-time optimization.
+This project identifies financial exposure within a procurement pipeline by integrating internal supplier data with **UNCTAD global maritime benchmarks**. By auditing these datasets, I identified significant capital-at-risk tied to high-congestion shipping lanes, providing actionable insights for vendor diversification and lead-time optimization.
 
 ---
 
-##  Key Audit Findings
+## 📊 Key Audit Findings
 
 The following table summarizes the high-risk suppliers identified by joining internal spend data with external port performance metrics.
 
 | Supplier | Home Country | Value At Risk (Processing) | Port Wait Time (Days) | Risk Level |
 | --- | --- | --- | --- | --- |
-| **Gamma_Co** | Russian Federation | **$1,875,200.00** | **1.60** |  CRITICAL |
-| **Beta_Supplies** | Germany | $450,300.00 | 0.95 |  MEDIUM |
-| **Alpha_Inc** | Singapore | $120,000.00 | 0.46 |  LOW |
+| **Gamma_Co** | Russian Federation | **$1,875,200.00** | **1.60** | 🔴 CRITICAL |
+| **Beta_Supplies** | Germany | $450,300.00 | 0.95 | 🟡 MEDIUM |
+| **Alpha_Inc** | Singapore | $120,000.00 | 0.46 | 🟢 LOW |
 
-> **Strategic Insight:** **Gamma_Co** represents our primary vulnerability. The combination of nearly $1.9M in pending value and the highest regional port delays suggests an immediate need for contingency planning or alternative routing.
-
----
-
-📂 Project Structure
-
-To ensure transparency, the repository is organized into specific "warehouses" for data and logic:
-
-    📁 Datasets(https://github.com/Hassan-Allawati/Supply-Chain-Intelligence/tree/main/Dataset): View the raw CSV files for Procurement KPIs and Maritime Port Performance.
-
-    📁 SQL Queries(https://github.com/Hassan-Allawati/Supply-Chain-Intelligence/tree/main/SQL_Quries): View the structured logic used in Google BigQuery to clean and join the datasets.
+> **Strategic Insight:** **Gamma_Co** represents the primary vulnerability. The combination of nearly $1.9M in pending value and the highest regional port delays suggests an immediate need for contingency planning or alternative routing.
 
 ---
 
-##  Technical Audit Workflow
+## 📂 Project Structure
+
+To ensure transparency and easy navigation, the repository is organized as follows. Clicking these links will take you directly to the files:
+
+* **[📁 Dataset Repository](https://github.com/Hassan-Allawati/Supply-Chain-Intelligence/tree/main/Dataset):** Access raw CSV files for Procurement KPIs and Maritime Port Performance.
+* **[📁 SQL Query Warehouse](https://github.com/Hassan-Allawati/Supply-Chain-Intelligence/tree/main/SQL_Queries/Maritime-Port-Performance-Project):** Access the structured logic used in Google BigQuery to clean and join the datasets.
+
+---
+
+## 🛠️ Technical Audit Workflow
 
 ### **1. Internal Performance Overview**
 
@@ -49,13 +48,9 @@ To ensure transparency, the repository is organized into specific "warehouses" f
 
 ---
 
-## Business Recommendations
-
-Based on the SQL output, I recommend the following C-Suite actions:
+## 💡 Business Recommendations
 
 1. **Risk Mitigation:** Reduce order volume with **Gamma_Co** by 15% until regional port wait times drop below 1.2 days.
-2. **Lead-Time Optimization:** Shift high-priority container shipments toward **Alpha_Inc** (Singapore), leveraging their superior port turnaround efficiency.
+2. **Lead-Time Optimization:** Shift high-priority container shipments toward **Alpha_Inc** (Singapore) to leverage superior port turnaround efficiency.
 3. **Data Integration:** Automate this SQL pipeline to provide real-time risk alerts for the Procurement team.
-
----
 
