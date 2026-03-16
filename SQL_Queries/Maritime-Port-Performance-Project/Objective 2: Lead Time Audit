@@ -1,0 +1,15 @@
+WITH Lead_Time_Logic AS (
+  SELECT Supplier AS Supplier_Name,
+  DATE_DIFF(DATE(Delivery_Date), DATE(Order_Date), DAY) AS lead_time,
+  Order_Status
+  FROM LSCM_ID.procurement_data
+)
+
+SELECT 
+  Supplier_Name, 
+  ROUND(AVG(lead_time), 0) AS Avg_Lead_Time_Days
+FROM Lead_Time_Logic
+WHERE Order_Status IN ('Delivered') 
+GROUP BY Supplier_name 
+ORDER BY Avg_Lead_Time_Days DESC
+LIMIT 10;
