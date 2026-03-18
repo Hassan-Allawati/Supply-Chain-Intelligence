@@ -1,14 +1,14 @@
-# 🚢 Strategic Maritime & Procurement Risk Audit
+# Strategic Maritime & Procurement Risk Audit
 
 ### **Sohar Port Operations | Multi-Dataset Supply Chain Analysis**
 
-## 📝 Executive Summary
+## Executive Summary
 
 This project identifies financial exposure within a procurement pipeline by integrating internal supplier data with **UNCTAD global maritime benchmarks**. By auditing these datasets, I identified significant capital-at-risk tied to high-congestion shipping lanes, providing actionable insights for vendor diversification and lead-time optimization.
 
 ---
 
-## 📊 Key Audit Findings
+## Key Audit Findings
 
 The following table summarizes the high-risk suppliers identified by joining internal spend data with external port performance metrics.
 
@@ -22,7 +22,7 @@ The following table summarizes the high-risk suppliers identified by joining int
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 To ensure transparency and easy navigation, the repository is organized as follows. Clicking these links will take you directly to the files:
 
@@ -31,7 +31,7 @@ To ensure transparency and easy navigation, the repository is organized as follo
 
 ---
 
-## 🛠️ Technical Audit Workflow
+## Technical Audit Workflow
 
 ### **1. Internal Performance Overview**
 
@@ -48,7 +48,7 @@ To ensure transparency and easy navigation, the repository is organized as follo
 
 ---
 
-## 💡 Business Recommendations
+## Business Recommendations
 
 1. **Risk Mitigation:** Reduce order volume with **Gamma_Co** by 15% until regional port wait times drop below 1.2 days.
 2. **Lead-Time Optimization:** Shift high-priority container shipments toward **Alpha_Inc** (Singapore) to leverage superior port turnaround efficiency.
